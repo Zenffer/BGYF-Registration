@@ -1,6 +1,6 @@
 // ================= EDIT THIS =================
 // Paste your Apps Script Web app URL here (ends with /exec)
-const SCRIPT_URL = 'https://script.google.com/macros/s/PASTE_YOUR_DEPLOYMENT_ID/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzH6HSInvwVGMjIaRObZ776HJuiMzr1PHWiiZmbz0qRLqZKyEJjlw1u6k21opOX1Q/exec';
 // =============================================
 
 const $ = (id) => document.getElementById(id);
