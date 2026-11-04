@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register · No Turning Back · BGYF 2026</title>
+<meta name="description" content="Register for No Turning Back: From Grace to Commitment. Bicol Grace Youth Fellowship, December 27–30, 2026, Kilicao Elementary School, Daraga, Albay.">
+<meta name="theme-color" content="#1c1c1c">
+<meta property="og:title" content="No Turning Back · BGYF 2026 Registration">
+<meta property="og:description" content="December 27–30, 2026 · Kilicao Elementary School, Kilicao, Daraga, Albay">
+<meta property="og:image" content="assets/banner.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+    <img class="banner" src="assets/banner.jpg" width="851" height="315"
+         alt="No Turning Back: From Grace to Commitment, 1 Corinthians 15:10. Bicol Grace Youth Fellowship, December 27–30, 2026, Kilicao Elementary School, Kilicao, Daraga, Albay.">
+
+    <div class="content">
+    <header>
+        <p class="org">Bicol Grace Youth Fellowship</p>
+        <h1>Delegate Registration</h1>
+        <ul class="meta">
+            <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+                December 27–30, 2026
+            </li>
+            <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                Kilicao Elementary School, Daraga, Albay
+            </li>
+        </ul>
+    </header>
+
+    <div class="road" aria-hidden="true"></div>
+
+    <div class="tabs" role="tablist">
+        <button type="button" role="tab" id="t-register" aria-selected="true" aria-controls="tab-register">Register</button>
+        <button type="button" role="tab" id="t-check" aria-selected="false" aria-controls="tab-check">My registration &amp; program</button>
+    </div>
+
+    <!-- ============ CHECK REGISTRATION / PROGRAM ============ -->
+    <section id="tab-check" role="tabpanel" aria-labelledby="t-check" hidden>
+        <div id="me" hidden>
+            <div id="me-cards"></div>
+            <p class="logout"><button type="button" class="linkbtn" id="logout">Not you? Log out</button></p>
+            <div id="saved" class="saved" hidden role="status"></div>
+
+            <!-- ===== EDIT PROFILE ===== -->
+            <div id="edit" class="edit" hidden>
+                <h2>Edit profile</h2>
+                <p class="hint left" id="edit-for"></p>
+
+                <form id="unlock" novalidate>
+                    <p class="hint left">To protect your details, enter the email you registered with.</p>
+                    <label class="field">
+                        <span>Registered email</span>
+                        <input type="email" name="auth_email" maxlength="160" autocomplete="email" required>
+                        <small class="err" data-for="auth_email"></small>
+                    </label>
+                    <div class="alert" id="u-alert" hidden role="alert"></div>
+                    <div class="btn-row">
+                        <button class="btn" type="submit" id="u-submit">Continue</button>
+                        <button class="btn ghost" type="button" data-cancel>Cancel</button>
+                    </div>
+                </form>
+
+                <form id="editform" novalidate hidden>
+                    <label class="field">
+                        <span>Full name</span>
+                        <input type="text" name="full_name" maxlength="120" autocomplete="name" required>
+                        <small class="err" data-for="full_name"></small>
+                    </label>
+                    <div class="row">
+                        <label class="field">
+                            <span>Age</span>
+                            <input type="number" name="age" min="5" max="100" inputmode="numeric" required>
+                            <small class="err" data-for="age"></small>
+                        </label>
+                        <fieldset class="field">
+                            <span>Sex</span>
+                            <div class="seg" id="e-sex"></div>
+                            <small class="err" data-for="sex"></small>
+                        </fieldset>
+                    </div>
+                    <label class="field">
+                        <span>Active email</span>
+                        <input type="email" name="email" maxlength="160" autocomplete="email" required>
+                        <small class="err" data-for="email"></small>
+                    </label>
+                    <label class="field">
+                        <span>Local church</span>
+                        <select name="local_church" id="e-church" required></select>
+                        <input type="text" name="local_church_other" id="e-church-other" maxlength="160" placeholder="Type your church" hidden>
+                        <small class="err" data-for="local_church"></small>
+                    </label>
+                    <fieldset class="field">
+                        <span>Role</span>
+                        <div class="roles" id="e-role"></div>
+                        <small class="err" data-for="role"></small>
+                    </fieldset>
+                    <p class="hint left">If you change your name or church, use the new ones the next time you log in.</p>
+                    <div class="alert" id="e-alert" hidden role="alert"></div>
+                    <div class="btn-row">
+                        <button class="btn" type="submit" id="e-submit">Save changes</button>
+                        <button class="btn ghost" type="button" data-cancel>Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <h2 class="prog-title">Event Program</h2>
+            <p class="hint left" id="prog-updated"></p>
+            <div class="daytabs" id="daytabs" role="tablist"></div>
+            <ol class="timeline" id="timeline"></ol>
+        </div>
+
+        <form id="lookup" novalidate>
+            <p class="hint left">Log in with your name and church exactly as you registered to see your registration code and the event program.</p>
+            <label class="field">
+                <span>Full name</span>
+                <input type="text" name="full_name" maxlength="120" autocomplete="name" required>
+                <small class="err" data-for="full_name"></small>
+            </label>
+            <label class="field">
+                <span>Local church</span>
+                <select name="local_church" id="l-church" required></select>
+                <input type="text" name="local_church_other" id="l-church-other" maxlength="160" placeholder="Type your church" hidden>
+                <small class="err" data-for="local_church"></small>
+            </label>
+            <div id="l-alert" class="alert" hidden role="alert"></div>
+            <button class="btn" type="submit" id="l-submit">Log in</button>
+        </form>
+    </section>
+
+    <!-- ============ REGISTER ============ -->
+    <section id="tab-register" role="tabpanel" aria-labelledby="t-register">
+    <div id="notice" class="notice" hidden></div>
+    <div id="alert" class="alert" hidden role="alert"></div>
+
+    <div id="success" class="success" hidden>
+        <p class="kicker">No turning back</p>
+        <h2>You're registered!</h2>
+        <p>Thank you, <strong id="s-name"></strong>.</p>
+        <p>Your registration code:</p>
+        <p class="code" id="s-code"></p>
+        <p class="hint">Take a screenshot of this page and show it at the registration desk.</p>
+        <div class="success-actions">
+            <button class="btn" type="button" id="see-program">View event program</button>
+            <button class="btn ghost" type="button" id="again">Register another person</button>
+        </div>
+    </div>
+
+    <form id="form" novalidate>
+        <div class="hp" aria-hidden="true">
+            <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <label class="field">
+            <span>Full name</span>
+            <input type="text" name="full_name" maxlength="120" autocomplete="name" required>
+            <small class="err" data-for="full_name"></small>
+        </label>
+
+        <div class="row">
+            <label class="field">
+                <span>Age</span>
+                <input type="number" name="age" min="5" max="100" inputmode="numeric" required>
+                <small class="err" data-for="age"></small>
+            </label>
+
+            <fieldset class="field">
+                <span>Sex</span>
+                <div class="seg">
+                    <label><input type="radio" name="sex" value="Male" required><span>Male</span></label>
+                    <label><input type="radio" name="sex" value="Female"><span>Female</span></label>
+                </div>
+                <small class="err" data-for="sex"></small>
+            </fieldset>
+        </div>
+
+        <label class="field">
+            <span>Active email</span>
+            <input type="email" name="email" maxlength="160" autocomplete="email" required>
+            <small class="err" data-for="email"></small>
+        </label>
+
+        <label class="field">
+            <span>Local church</span>
+            <select name="local_church" id="church" required>
+                <option value="" selected disabled>Select your church</option>
+                <option>Adiangao</option>
+                <option>Daraga</option>
+                <option>Garchitorena</option>
+                <option>Guinobatan</option>
+                <option>Ligao</option>
+                <option>Mampirao</option>
+                <option>Nogpo</option>
+                <option value="__other">Other (not listed)</option>
+            </select>
+            <input type="text" name="local_church_other" id="church-other" maxlength="160" placeholder="Type your church" hidden>
+            <small class="err" data-for="local_church"></small>
+        </label>
+
+        <fieldset class="field">
+            <span>Role</span>
+            <div class="roles">
+                <label><input type="radio" name="role" value="Youth Delegate" required><span>Youth Delegate</span></label>
+                <label><input type="radio" name="role" value="Pastor"><span>Pastor</span></label>
+                <label><input type="radio" name="role" value="BGYF Officer"><span>BGYF Officer</span></label>
+                <label><input type="radio" name="role" value="Workers"><span>Workers</span></label>
+                <label><input type="radio" name="role" value="Church Member/Volunteer"><span>Church Member/Volunteer</span></label>
+            </div>
+            <small class="err" data-for="role"></small>
+        </fieldset>
+
+        <label class="consent">
+            <input type="checkbox" name="consent" value="1">
+            <span>I agree that the organizers may collect and use the information above for this event only, in line with the Data Privacy Act of 2012.</span>
+        </label>
+        <small class="err" data-for="consent"></small>
+
+        <button class="btn" type="submit" id="submit">Register</button>
+    </form>
+    </section>
+
+    <p class="verse"><b>From Grace to Commitment</b> · 1 Corinthians 15:10</p>
+    </div>
+</main>
+<footer>NO TURNING BACK · BGYF 2026</footer>
+<script src="program.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
